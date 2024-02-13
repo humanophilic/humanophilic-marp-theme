@@ -1,0 +1,177 @@
+/* @theme humanophilic */
+
+@import-theme "default";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+$color-text: #222222;
+$color-primary: #85023e;
+$color-on-primary: #ffffff;
+
+$image-bg-main: url("./themes/assets/bg-main.jpg");
+$image-bg-top: url("./themes/assets/bg-top.jpg");
+
+:root {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-text;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+a {
+  text-decoration: underline !important;
+  color: blue !important;
+}
+
+// 注釈
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 0.5em;
+
+  & * {
+    margin: 0;
+  }
+}
+
+section {
+  background-image: $image-bg-main;
+  background-size: cover;
+  justify-content: flex-start;
+  padding: 32px 32px 32px 112px;
+
+  &.table-center {
+    table {
+      margin: 0 auto;
+    }
+  }
+
+  &.center {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // トップページ
+  &.title {
+    background-image: $image-bg-top;
+    background-size: cover;
+    padding: 32px;
+
+    // ページ番号を非表示にする
+    &::after {
+      display: none;
+    }
+
+    // コンテンツのスタイル
+    & .top {
+      position: absolute;
+      bottom: 264px;
+    }
+    & .bottom {
+      position: absolute;
+      bottom: 128px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    & .title {
+      color: $color-on-primary;
+      font-size: 1.6em;
+      line-height: 1.4;
+    }
+    & .subtitle {
+      color: $color-on-primary;
+      font-size: 1.0em;
+    }
+    & .name {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    & .affiliation {
+      font-size: 0.8em;
+      margin: 0;
+    }
+  }
+
+  // pagination
+  &::after {
+    content: attr(data-marpit-pagination);
+    position: absolute;
+    width: 80px;
+    top: 80px;
+    left: 0px;
+    text-align: center;
+    color: $color-on-primary;
+  }
+}
+
+.highlight {
+  background-color: $color-primary;
+  color: $color-on-primary;
+
+  padding: 16px 32px;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+
+  & * {
+    margin: 0;
+  }
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+
+    &.xl {
+      width: 420px;
+
+      & p {
+        font-size: 1em;
+      }
+    }
+
+    &.lg {
+      width: 320px;
+
+      & p {
+        font-size: 0.8em;
+      }
+    }
+
+    & img {
+      height: auto;
+    }
+
+    & p {
+      font-size: 0.6em;
+    }
+  }
+}

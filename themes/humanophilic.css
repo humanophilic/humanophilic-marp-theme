@@ -1,0 +1,145 @@
+/* @theme humanophilic */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+@import-theme "default";
+:root {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #222222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+a {
+  text-decoration: underline !important;
+  color: blue !important;
+}
+
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 0.5em;
+}
+.caption * {
+  margin: 0;
+}
+
+section {
+  background-image: url("./themes/assets/bg-main.jpg");
+  background-size: cover;
+  justify-content: flex-start;
+  padding: 32px 32px 32px 112px;
+}
+section.table-center table {
+  margin: 0 auto;
+}
+section.center {
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+section.title {
+  background-image: url("./themes/assets/bg-top.jpg");
+  background-size: cover;
+  padding: 32px;
+}
+section.title::after {
+  display: none;
+}
+section.title .top {
+  position: absolute;
+  bottom: 264px;
+}
+section.title .bottom {
+  position: absolute;
+  bottom: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+section.title .title {
+  color: #ffffff;
+  font-size: 1.6em;
+  line-height: 1.4;
+}
+section.title .subtitle {
+  color: #ffffff;
+  font-size: 1em;
+}
+section.title .name {
+  font-size: 1.2em;
+  margin: 0;
+}
+section.title .affiliation {
+  font-size: 0.8em;
+  margin: 0;
+}
+section::after {
+  content: attr(data-marpit-pagination);
+  position: absolute;
+  width: 80px;
+  top: 80px;
+  left: 0px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.highlight {
+  background-color: #85023e;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+}
+.highlight * {
+  margin: 0;
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.graph-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+}
+.graph-item.xl {
+  width: 420px;
+}
+.graph-item.xl p {
+  font-size: 1em;
+}
+.graph-item.lg {
+  width: 320px;
+}
+.graph-item.lg p {
+  font-size: 0.8em;
+}
+.graph-item img {
+  height: auto;
+}
+.graph-item p {
+  font-size: 0.6em;
+}
+
+/*# sourceMappingURL=humanophilic.css.map */

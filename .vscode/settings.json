@@ -1,0 +1,14 @@
+{
+  "markdown.marp.themes": ["./themes/humanophilic.css"], // NOTE: 新規でテーマを追加する場合、ここにファイルパスを追加する
+  "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss-SS",
+  "pasteImage.insertPattern": "${imageSyntaxPrefix}./assets/${imageFileName}${imageSyntaxSuffix}",
+  "pasteImage.path": "${currentFileDir}/assets",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "explicit"
+  },
+  "markdownlint.config": {
+    "extends": ".markdownlint.json"
+  },
+  "textlint.autoFixOnSave": true,
+  "textlint.run": "onSave"
+}

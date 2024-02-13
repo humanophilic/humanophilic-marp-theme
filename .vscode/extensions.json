@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "marp-team.marp-vscode",
+    "DavidAnson.vscode-markdownlint",
+    "taichi.vscode-textlint"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "humanophilic-marp-theme",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "marp",
+    "humanophilic"
+  ],
+  "author": "Yuta Ohira (ohira.yuta@arakawa-lab.com)",
+  "license": "ISC"
+}

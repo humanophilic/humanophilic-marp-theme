@@ -8,7 +8,7 @@
     "dev:marp": "marp -s -w .",
     "build": "run-p build:*",
     "build:css": "sass themes/:themes/",
-    "export": "run-s build & run-p export:*",
+    "export": "run-s build export:*",
     "export:pdf": "marp --pdf slide.md -o ./public/slide.pdf",
     "export:pptx": "marp --pptx --image-scale 2 slide.md -o ./public/slide.pptx",
     "presentation": "marp --preview --image-scale 2 slide.md ./public/slide.html"
